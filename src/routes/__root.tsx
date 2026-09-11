@@ -16,8 +16,6 @@ import { Footer } from "@/components/Footer";
 import { GlowLayer } from "@/components/GlowLayer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
-
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -83,12 +81,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aspiring Homes — Design & Construction Firm" },
+      { title: "Ali Enterprises — Premium Corian® Surfaces" },
       {
         name: "description",
-        content: "Making quality houses since 2019. Architecture, interiors and construction.",
+        content: "Premium Corian® surfaces for bathrooms, interiors and custom projects.",
       },
-      { name: "author", content: "Aspiring Homes" },
+      { name: "author", content: "Ali Enterprises" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -146,5 +144,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-
-

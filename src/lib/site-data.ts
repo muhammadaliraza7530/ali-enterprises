@@ -5,40 +5,47 @@
  */
 
 export const img = {
-  logo: "/logo.jpg",
+  logo: "/logo.jpeg",
 
-  // Photoreal hero / feature photography
-  spanishVilla: "/homes/hero-spanish.jpg",
-  luxuryVilla: "/homes/hero-villa.jpg",
-  luxuryHouse: "/homes/hero-luxury.jpg",
-  courtyard: "/homes/hero-courtyard.jpg",
-
-  // Real house photography
-  modernVilla: "/homes/home-1.jpg",
-  classicMansion: "/homes/home-2.jpg",
-  greyClassic: "/homes/home-3.jpg",
-  completedVilla: "/homes/home-4.jpg",
-  brickFront: "/homes/home-5.jpg",
+  // Real Corian kitchen, vanity, cabinet, reception and commercial counter photography.
+  luxuryVilla:
+    "/projects/D%20h%20a%20phase%206%20Karachi/WhatsApp%20Image%202026-09-10%20at%207.48.19%20AM.jpeg",
+  spanishVilla:
+    "/projects/Defence%20phase%204%20Karachi/WhatsApp%20Image%202026-09-10%20at%207.39.23%20AM.jpeg",
+  luxuryHouse:
+    "/projects/Ufone%20all%20branches%20Karachi/WhatsApp%20Image%202026-09-10%20at%208.03.06%20AM.jpeg",
+  courtyard:
+    "/projects/Clariant%20company%20singer%20chowrangi%20Karachi/WhatsApp%20Image%202026-09-10%20at%207.53.25%20AM.jpeg",
+  modernVilla:
+    "/projects/Hyperstar%20Karachi/WhatsApp%20Image%202026-09-10%20at%207.58.18%20AM.jpeg",
+  classicMansion:
+    "/projects/Joban%20fabrics%20dolmen%20Mall%20Tariq%20road%20Karachi/WhatsApp%20Image%202026-09-10%20at%208.09.44%20AM.jpeg",
+  greyClassic:
+    "/projects/Ocean%20Tower%20laboratory%20Karachi/WhatsApp%20Image%202026-09-10%20at%208.04.53%20AM.jpeg",
+  completedVilla:
+    "/projects/j.%20Fragrancies%20and%20cosmetic%20Lucky%20one%20Mall%20Karachi/WhatsApp%20Image%202026-09-10%20at%208.01.40%20AM.jpeg",
+  brickFront:
+    "/projects/j.%20Fragrancies%20and%20cosmetic%20dolmen%20Mall%20Tariq%20road%20Karachi/WhatsApp%20Image%202026-09-10%20at%207.44.00%20AM.jpeg",
 };
 
 export const showreelUrl = "/video/showreel.mp4";
 
 export const site = {
-  name: "Aspiring Homes",
-  short: "Aspiring",
-  fullName: "Aspiring Homes — Architecture, Interior & Construction",
-  tagline: "Making Quality Houses Since 2019",
+  name: "Ali Enterprises",
+  short: "Ali Enterprises",
+  fullName: "Ali Enterprises — Premium Corian® Surfaces for Modern Spaces",
+  tagline: "The beauty is seamless",
   logo: img.logo,
-  address: "DHA Phase 6, Lahore, Punjab, Pakistan",
-  addressShort: "New Super Town, Lahore",
-  email: "aspiringtalks@gmail.com",
-  phone: "0306 0221896",
-  phoneTel: "+923060221896",
-  facebook: "https://facebook.com/AspiringHomes",
-  instagram: "https://instagram.com/aspiringhomesofficial",
-  youtube: "https://youtube.com/@AspiringHomes",
+  address: "Pakistan",
+  addressShort: "Pakistan",
+  email: "info@alienterprisescorian.com",
+  phone: "+92 305 2200996",
+  phoneTel: "+923052200996",
+  facebook: "https://facebook.com",
+  instagram: "https://instagram.com",
+  youtube: "https://youtube.com",
   whatsapp:
-    "https://wa.me/923060221896?text=Hello%20Aspiring%20Homes%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
+    "https://wa.me/923052200996?text=Hello%20Ali%20Enterprises%2C%20I%20would%20like%20to%20request%20a%20quote.",
   hours: [
     { day: "Monday to Thursday", time: "9am to 7pm" },
     { day: "Friday", time: "9am to 12pm & 3pm to 7pm" },
@@ -57,55 +64,117 @@ export const navLinks = [
 
 export const heroSlides = [
   {
-    title: "We design and build the home you keep imagining",
-    highlight:
-      "Architecture, interiors and full construction — planned, drawn and executed by one team from concept to handover.",
+    title: "Premium Corian® Surfaces for Modern Spaces",
+    highlight: "One surface. No visible joins. Endless possibilities.",
     image: img.luxuryVilla,
   },
   {
-    title: "Spanish, classical and modern homes",
-    highlight:
-      "Arched colonnades, terracotta roofs or sharp contemporary lines — we build the language your family loves.",
+    title: "Bathrooms, interiors and custom projects",
+    highlight: "Transform your space with the world's leading solid surface.",
     image: img.spanishVilla,
   },
   {
-    title: "Making quality houses since 2019",
+    title: "Beauty that lasts",
     highlight:
-      "From the first 2D plan to the final coat of paint, our designers and site teams turn your plot into a home.",
+      "Expert craftsmanship and world-class material bring elegance and durability to every space.",
     image: img.luxuryHouse,
   },
   {
-    title: "Concept to creation, under one roof",
-    highlight:
-      "Grey structure, finishing, interiors and 3D visualisation delivered across Lahore, Faisalabad and Sialkot.",
+    title: "Designed for your vision",
+    highlight: "Any shape, any size, any color. We fabricate Corian® to match your exact design.",
     image: img.courtyard,
   },
 ];
 
 export const stats = [
-  { value: "2019", label: "Building since" },
-  { value: "50+", label: "Homes designed & built" },
-  { value: "3", label: "Cities served" },
+  { value: "100%", label: "Seamless surfaces" },
+  { value: "5", label: "Reasons to choose Corian®" },
+  { value: "∞", label: "Design possibilities" },
 ];
 
 /** Branded social posts — shown full-frame, never cropped. */
 export const posts = [
-  { image: "/posts/post-1.jpg", title: "Modern Facade Residence", location: "Sialkot", tag: "Coming Soon" },
-  { image: "/posts/post-2.jpg", title: "Crafting Classic Beauty", location: "Lahore", tag: "In Progress" },
-  { image: "/posts/post-3.jpg", title: "Concept to Creation", location: "Lahore", tag: "In Progress" },
-  { image: "/posts/post-4.jpg", title: "Classical Grand Residence", location: "Faisalabad", tag: "Coming Soon" },
-  { image: "/posts/post-5.jpg", title: "Classic Villa Handover", location: "Lahore", tag: "Completed" },
-  { image: "/posts/post-6.jpg", title: "Building Dreams", location: "Lahore", tag: "Under Construction" },
-  { image: "/posts/post-7.jpg", title: "Constructing Excellence", location: "Lahore", tag: "Under Construction" },
-  { image: "/posts/post-8.jpg", title: "The Reflection — Night", location: "Sialkot", tag: "Coming Soon" },
-  { image: "/posts/post-9.jpg", title: "The Reflection — Duplex", location: "Sialkot", tag: "Coming Soon" },
+  {
+    image: img.luxuryVilla,
+    title: "Corian Kitchen & Cabinetry",
+    location: "DHA Phase 6, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.spanishVilla,
+    title: "Seamless Bathroom Vanity",
+    location: "Defence Phase 4, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.luxuryHouse,
+    title: "Corian Reception Counter",
+    location: "Ufone, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.courtyard,
+    title: "Commercial Bank Counter",
+    location: "Clariant, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.modernVilla,
+    title: "Retail Counter Surface",
+    location: "Hyperstar, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.classicMansion,
+    title: "Custom Corian Countertops",
+    location: "Joban Fabrics, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.greyClassic,
+    title: "Corian Laboratory Surfaces",
+    location: "Ocean Tower, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.completedVilla,
+    title: "Custom Retail Vanity",
+    location: "Lucky One Mall, Karachi",
+    tag: "Completed",
+  },
+  {
+    image: img.brickFront,
+    title: "Retail Display Counter",
+    location: "Dolmen Mall, Karachi",
+    tag: "Completed",
+  },
 ];
 
 export const videoGallery = [
-  { src: "/videogrally/video1.mp4", poster: img.luxuryVilla, title: "Project Showreel", caption: "Design to handover" },
-  { src: "/videogrally/video2.mp4", poster: img.spanishVilla, title: "Spanish Villa Walkthrough", caption: "Elevation study" },
-  { src: "/videogrally/video3.mp4", poster: img.luxuryHouse, title: "Site Progress Film", caption: "Grey structure" },
-  { src: "/videogrally/video4.mp4", poster: img.courtyard, title: "Interior Reveal", caption: "Finishing stage" },
+  {
+    src: "/videogrally/video1.mp4",
+    poster: img.luxuryVilla,
+    title: "Corian Project Showreel",
+    caption: "Surfaces and counters",
+  },
+  {
+    src: "/videogrally/video2.mp4",
+    poster: img.spanishVilla,
+    title: "Bathroom Vanity Walkthrough",
+    caption: "Seamless finish",
+  },
+  {
+    src: "/videogrally/video3.mp4",
+    poster: img.luxuryHouse,
+    title: "Commercial Counter Detail",
+    caption: "Built for daily use",
+  },
+  {
+    src: "/videogrally/video4.mp4",
+    poster: img.courtyard,
+    title: "Reception Counter Reveal",
+    caption: "Custom fabrication",
+  },
 ];
 
 export const testimonials = [
@@ -143,46 +212,35 @@ export const testimonials = [
 
 export const services = [
   {
-    slug: "architecture",
-    title: "Architecture Design",
+    slug: "bathrooms",
+    title: "Bathrooms",
     image: img.luxuryHouse,
-    short: "2D planning, 3D elevation design and complete working drawings for your plot.",
-    body: "2D planning, 3D elevation design and complete working drawings tailored to your plot size and family needs. Every drawing is developed until you approve each detail, so nothing is left to guesswork on site.",
+    short:
+      "Seamless vanities, washbasins, shower trays and wall cladding. Hygienic and easy to maintain.",
+    body: "Seamless vanities, washbasins, shower trays and wall cladding with a hygienic, easy-to-maintain finish.",
   },
   {
-    slug: "construction",
-    title: "Construction",
+    slug: "interiors",
+    title: "Interiors",
     image: img.brickFront,
-    short: "Grey structure and finishing packages with quality material and trained labour.",
-    body: "Grey structure and finishing packages with quality material, trained labour and transparent site reporting. Our own supervised crews cast columns, beams and slabs strictly to the approved drawings.",
+    short:
+      "Kitchen countertops, wall panels, reception desks and furniture surfaces. Designed to impress.",
+    body: "Kitchen countertops, wall panels, reception desks and furniture surfaces designed to bring a refined finish to modern interiors.",
   },
   {
-    slug: "interior",
-    title: "Interior Design",
+    slug: "custom-solutions",
+    title: "Custom Solutions",
     image: img.greyClassic,
-    short: "Living, bedroom, kitchen and ceiling design with lighting and furniture detail.",
-    body: "Living, bedroom, kitchen and ceiling design with lighting layouts, furniture detail and execution — designed and installed by the same team that built your structure.",
+    short:
+      "Any shape. Any size. Any color. We fabricate Corian® to match your exact design vision.",
+    body: "Curves, backlighting and integrated sinks are all possible. We fabricate Corian® to match your exact design vision.",
   },
   {
-    slug: "renovation",
-    title: "Renovation",
+    slug: "installation-maintenance",
+    title: "Installation & Maintenance",
     image: img.completedVilla,
-    short: "Facade upgrades, layout changes and full renovation of existing spaces.",
-    body: "Facade upgrades, layout changes and full renovation of existing homes and commercial spaces — re-elevated, remodelled and finished without you leaving the neighbourhood you love.",
-  },
-  {
-    slug: "visualisation",
-    title: "3D Visualisation",
-    image: img.classicMansion,
-    short: "Photoreal exterior and interior renders before a single brick is laid.",
-    body: "Photoreal exterior and interior renders so you can see your home before a single brick is laid. Materials, lighting and landscaping are all visualised so approvals are quick and confident.",
-  },
-  {
-    slug: "marketing",
-    title: "Marketing & Media",
-    image: img.spanishVilla,
-    short: "Photography, reels and brand content for developers and builders.",
-    body: "Photography, reels and brand content for developers and builders who want their work seen — the same media team that produces our own project films.",
+    short: "Professional fitting and after-sales support to keep your surface looking new.",
+    body: "Professional fitting and after-sales support keep your Corian® surface looking new for years to come.",
   },
 ];
 
@@ -196,10 +254,26 @@ export const registrations = [
 ];
 
 export const process = [
-  { step: "01", title: "Consultation", body: "We discuss your plot, budget and requirements — in person or on WhatsApp." },
-  { step: "02", title: "Design", body: "Floor plans and 3D elevations are developed until you approve every detail." },
-  { step: "03", title: "Execution", body: "Grey structure and finishing delivered by our own supervised site teams." },
-  { step: "04", title: "Handover", body: "Final finishing, cleaning and a walk-through before your keys are handed over." },
+  {
+    step: "01",
+    title: "Consultation",
+    body: "Share your space, measurements and design vision with our team.",
+  },
+  {
+    step: "02",
+    title: "Design",
+    body: "We develop a seamless Corian® solution tailored to your project.",
+  },
+  {
+    step: "03",
+    title: "Fabrication",
+    body: "Our expert team crafts each piece with precision and care.",
+  },
+  {
+    step: "04",
+    title: "Installation",
+    body: "Professional fitting and finishing bring your design to life.",
+  },
 ];
 
 export const galleryImages = [

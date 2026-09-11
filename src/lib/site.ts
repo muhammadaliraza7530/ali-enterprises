@@ -1,24 +1,29 @@
-import { img, showreelUrl as reelUrl, process as processSteps, services as serviceList } from "@/lib/site-data";
+import {
+  img,
+  showreelUrl as reelUrl,
+  process as processSteps,
+  services as serviceList,
+} from "@/lib/site-data";
 
 export const logoUrl = img.logo;
 export const showreelUrl = reelUrl;
 
 export const company = {
-  name: "Aspiring Homes",
-  tagline: "Architecture · Interior · Construction",
-  since: "Making Quality Houses Since 2019",
-  phoneDisplay: "0306 0221896",
-  phoneTel: "+923060221896",
+  name: "Ali Enterprises",
+  tagline: "Premium Corian® Surfaces for Modern Spaces",
+  since: "The beauty is seamless",
+  phoneDisplay: "+92 305 2200996",
+  phoneTel: "+923052200996",
   whatsapp:
-    "https://wa.me/923060221896?text=Hello%20Aspiring%20Homes%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
-  email: "aspiringtalks@gmail.com",
-  addressShort: "New Super Town, Lahore",
-  address: "DHA Phase 6, Lahore, Punjab, Pakistan",
-  hours: "Mon–Sat, 9am to 7pm",
+    "https://wa.me/923052200996?text=Hello%20Ali%20Enterprises%2C%20I%20would%20like%20to%20request%20a%20quote.",
+  email: "info@alienterprisescorian.com",
+  addressShort: "Pakistan",
+  address: "Pakistan",
+  hours: "By appointment",
   socials: [
-    { label: "Instagram", href: "https://instagram.com/aspiringhomesofficial" },
-    { label: "Facebook", href: "https://facebook.com/AspiringHomes" },
-    { label: "YouTube", href: "https://youtube.com/@AspiringHomes" },
+    { label: "Instagram", href: "https://instagram.com" },
+    { label: "Facebook", href: "https://facebook.com" },
+    { label: "YouTube", href: "https://youtube.com" },
   ],
 };
 
@@ -36,69 +41,67 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "the-reflection-sialkot",
-    title: "The Reflection — Duplex",
-    location: "Sialkot",
-    status: "Upcoming",
+    title: "Corian Kitchen & Cabinetry",
+    location: "DHA Phase 6, Karachi",
+    status: "Completed",
     category: "Modern",
     image: img.luxuryVilla,
     gallery: [img.luxuryVilla, img.luxuryHouse, img.modernVilla],
-    blurb:
-      "A contemporary duplex with a travertine-and-graphite elevation, layered facade lighting and glass balustrades.",
+    blurb: "Custom Corian countertops and cabinetry designed for a clean, seamless kitchen finish.",
   },
   {
     slug: "spanish-courtyard-villa",
-    title: "Spanish Courtyard Villa",
-    location: "Lahore",
-    status: "Under Construction",
-    category: "Spanish",
+    title: "Seamless Bathroom Vanity",
+    location: "Defence Phase 4, Karachi",
+    status: "Completed",
+    category: "Modern",
     image: img.spanishVilla,
     gallery: [img.spanishVilla, img.courtyard, img.classicMansion],
     blurb:
-      "White stucco walls, terracotta roof tiles and an arched colonnade wrapped around a private landscaped courtyard.",
+      "A custom Corian vanity with integrated surface detailing, drawers and a refined bathroom finish.",
   },
   {
     slug: "classical-grand-residence",
-    title: "Classical Grand Residence",
-    location: "Citi Housing, Faisalabad",
-    status: "Upcoming",
-    category: "Classic",
+    title: "Corian Reception Counter",
+    location: "Ufone, Karachi",
+    status: "Completed",
+    category: "Modern",
     image: img.classicMansion,
     gallery: [img.classicMansion, img.courtyard, img.completedVilla],
     blurb:
-      "Columns, arched glazing and a double-height entrance foyer designed for a landmark corner plot.",
+      "A branded reception counter fabricated with durable Corian surfaces for a high-traffic space.",
   },
   {
     slug: "modern-luxury-house",
-    title: "Modern Luxury House",
-    location: "Lahore",
+    title: "Commercial Bank Counter",
+    location: "Clariant, Karachi",
     status: "Completed",
     category: "Modern",
     image: img.luxuryHouse,
     gallery: [img.luxuryHouse, img.modernVilla, img.brickFront],
-    blurb:
-      "Travertine and dark stone facade with a double-height entrance, black-framed glazing and a glass balcony.",
+    blurb: "A long commercial counter with a clean Corian work surface and custom front detailing.",
   },
   {
     slug: "grey-modern-residence",
-    title: "Grey Modern Residence",
-    location: "Lahore",
+    title: "Corian Laboratory Surfaces",
+    location: "Ocean Tower, Karachi",
     status: "Completed",
     category: "Modern",
     image: img.modernVilla,
     gallery: [img.modernVilla, img.greyClassic, img.brickFront],
     blurb:
-      "A crisp grey-and-black elevation with full-height glazing, a covered carport and a minimal front garden.",
+      "Easy-to-maintain Corian work surfaces fabricated for a professional laboratory environment.",
   },
   {
     slug: "corner-plot-residence",
-    title: "Corner Plot Residence",
-    location: "Sialkot",
-    status: "Under Construction",
+    title: "Custom Retail Counter",
+    location: "Lucky One Mall, Karachi",
+    status: "Completed",
     category: "Modern",
     image: img.brickFront,
     gallery: [img.brickFront, img.greyClassic, img.luxuryHouse],
     blurb:
-      "Two-storey corner house with large glass panels, a shaded carport and a warm stone-and-graphite palette.",
+      "Custom retail counters and display surfaces made for a polished, durable customer experience.",
   },
 ];
 

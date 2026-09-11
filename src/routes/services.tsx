@@ -1,21 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/site-data";
 import { PageHero, CtaBand } from "@/components/PageBits";
-// import { Reveal, SectionHeading } from "@/components/ui-bits";
+import { services } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Architecture, Construction & Interiors | Aspiring Homes" },
+      { title: "Services — Corian® Surfaces | Ali Enterprises" },
       {
         name: "description",
         content:
-          "Architecture design, grey structure and finishing construction, interior design, renovation and 3D visualisation by Aspiring Homes, Lahore.",
+          "Bathrooms, interiors, custom fabrication, installation and maintenance by Ali Enterprises.",
       },
-      { property: "og:title", content: "Services — Aspiring Homes" },
+      { property: "og:title", content: "Services — Ali Enterprises" },
       {
         property: "og:description",
-        content: "Design, construction, interiors and renovation delivered by one team.",
+        content: "Premium Corian® solutions for bathrooms, interiors and custom projects.",
       },
     ],
   }),
@@ -26,27 +26,26 @@ function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Services"
-        title="Coming Soon"
-        intro="Our service details and booking experience are being prepared. Please check back soon for updates."
+        eyebrow="Our services"
+        title="Solutions without limits"
+        intro="From seamless bathrooms to custom fabrication, we make Corian® work for your space."
         image={img.spanishVilla}
       />
 
       <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-3xl px-5 text-center lg:px-8">
-          <div className="rounded-3xl border border-dashed border-primary/40 bg-primary/10 p-10 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Under Construction</p>
-            <h2 className="mt-4 text-2xl font-bold sm:text-3xl">New services pages are on the way</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              We are updating this section with clearer offerings, timelines and consultation options.
-            </p>
-          </div>
+        <div className="mx-auto grid max-w-6xl gap-6 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+          {services.map((service) => (
+            <article key={service.slug} className="lit-panel bg-card p-6">
+              <h2 className="text-lg font-bold">{service.title}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.body}</p>
+            </article>
+          ))}
         </div>
       </section>
 
       <CtaBand
-        title="Tell us your plot size and budget"
-        body="We will come back with a plan, a timeline and an honest cost range."
+        title="Ready to upgrade your space?"
+        body="Get a seamless, modern surface designed just for you."
       />
     </>
   );

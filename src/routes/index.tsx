@@ -14,16 +14,16 @@ import { CtaBand } from "@/components/PageBits";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aspiring Homes — Luxury House Design & Construction, Pakistan" },
+      { title: "Ali Enterprises — Premium Corian® Surfaces for Modern Spaces" },
       {
         name: "description",
         content:
-          "Aspiring Homes designs and builds luxury villas, Spanish-style houses and modern homes across Lahore, Faisalabad and Sialkot. Making quality houses since 2019.",
+          "Ali Enterprises provides premium Corian® surfaces for bathrooms, interiors and custom projects across Pakistan.",
       },
-      { property: "og:title", content: "Aspiring Homes — Luxury House Design & Construction" },
+      { property: "og:title", content: "Ali Enterprises — Premium Corian® Surfaces" },
       {
         property: "og:description",
-        content: "Villas, Spanish houses and modern homes — designed, built and finished by one team.",
+        content: "Seamless, hygienic and customizable Corian® surfaces for modern spaces.",
       },
     ],
   }),
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HeroWordmark() {
-  const word = "ASPIRING";
+  const word = "ALI";
   return (
     <h2 className="flex justify-center gap-[0.06em] overflow-hidden text-[13vw] font-extrabold leading-none tracking-[0.06em] text-transparent sm:text-[9vw] lg:text-[7rem]">
       {word.split("").map((c, i) => (
@@ -83,7 +83,7 @@ function Hero() {
         </p>
         <HeroWordmark />
         <p className="mx-auto mt-1 text-[11px] font-semibold uppercase tracking-[0.5em] text-foreground/80 sm:text-sm">
-          Homes
+          Enterprises
         </p>
 
         <h1
@@ -92,7 +92,10 @@ function Hero() {
         >
           {slide.title}
         </h1>
-        <p key={slide.highlight} className="animate-rise-in mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base">
+        <p
+          key={slide.highlight}
+          className="animate-rise-in mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base"
+        >
           {slide.highlight}
         </p>
 
@@ -101,7 +104,7 @@ function Hero() {
             to="/projects"
             className="btn-shake sheen-on-hover inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent"
           >
-            View our work <ArrowRight className="size-4" />
+            Get a free quote <ArrowRight className="size-4" />
           </Link>
           <a
             href={site.whatsapp}
@@ -109,7 +112,7 @@ function Hero() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-primary/60 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
-            <Phone className="size-4" /> WhatsApp us
+            <Phone className="size-4" /> {site.phone}
           </a>
         </div>
 
@@ -140,9 +143,9 @@ function HomePage() {
       <section className="relative py-16 lg:py-24">
         <div className="mx-auto max-w-6xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="Showreel"
-            title="See how we build"
-            intro="A short film of our sites, elevations and finished homes."
+            eyebrow="The beauty is seamless"
+            title="Premium surfaces for modern spaces"
+            intro="One surface. No visible joins. Endless possibilities."
             align="center"
           />
           <Reveal className="mt-10">
@@ -169,28 +172,32 @@ function HomePage() {
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="What we do"
-            title="Design, construction and finishing under one roof"
-            intro="One accountable team from the first sketch to the last light fitting."
+            eyebrow="Our services"
+            title="Bathrooms, custom solutions and expert installation"
+            intro="Corian® surfaces made for the way you live and work."
           />
           <div className="mt-12">
             <AutoScroller speed={180}>
-              {services.map((s, i) => (
-                <Reveal key={s.slug} delay={i * 80} className="h-full">
-                  <article className="lit-panel flex h-full w-[280px] shrink-0 flex-col overflow-hidden bg-card sm:w-[360px]">
-                    <img 
-                      src={s.image} 
-                      alt={s.title} 
-                      loading="lazy" 
-                      className="aspect-16/10 w-full shrink-0 object-cover" 
-                    />
-                    <div className="flex flex-col p-5 sm:p-6">
-                      <h3 className="text-base font-bold sm:text-lg">{s.title}</h3>
-                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">{s.short}</p>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
+              {services
+                .filter((s) => s.slug !== "interiors")
+                .map((s, i) => (
+                  <Reveal key={s.slug} delay={i * 80} className="h-full">
+                    <article className="lit-panel flex h-full w-[280px] shrink-0 flex-col overflow-hidden bg-card sm:w-[360px]">
+                      <img
+                        src={s.image}
+                        alt={s.title}
+                        loading="lazy"
+                        className="aspect-16/10 w-full shrink-0 object-cover"
+                      />
+                      <div className="flex flex-col p-5 sm:p-6">
+                        <h3 className="text-base font-bold sm:text-lg">{s.title}</h3>
+                        <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                          {s.short}
+                        </p>
+                      </div>
+                    </article>
+                  </Reveal>
+                ))}
             </AutoScroller>
           </div>
         </div>
@@ -200,34 +207,38 @@ function HomePage() {
       <section className="overflow-hidden border-y border-border bg-card/30 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="Our projects"
-            title="Villas, Spanish homes and modern residences"
-            intro="Drag with finger to scroll manually, or let it auto-play."
+            eyebrow="Our portfolio"
+            title="Our premium projects"
+            intro="From luxury homes to commercial interiors."
           />
         </div>
         <div className="mt-12">
           <AutoScroller speed={180}>
-            {projects.map((p) => (
-              <Link
-                key={p.slug}
-                to="/projects/$slug"
-                params={{ slug: p.slug }}
-                className="lit-panel flex h-full w-[280px] shrink-0 flex-col overflow-hidden bg-card sm:w-[360px]"
-              >
-                <img
-                  src={p.image}
-                  alt={`${p.title}, ${p.location}`}
-                  loading="lazy"
-                  draggable={false}
-                  className="aspect-4/3 w-full shrink-0 object-cover"
-                />
-                <div className="flex flex-col p-5">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">{p.status}</span>
-                  <h3 className="mt-1.5 text-base font-bold">{p.title}</h3>
-                  <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>
-                </div>
-              </Link>
-            ))}
+            {projects
+              .filter((p) => p.slug !== "corner-plot-residence")
+              .map((p) => (
+                <Link
+                  key={p.slug}
+                  to="/projects/$slug"
+                  params={{ slug: p.slug }}
+                  className="lit-panel flex h-full w-[280px] shrink-0 flex-col overflow-hidden bg-card sm:w-[360px]"
+                >
+                  <img
+                    src={p.image}
+                    alt={`${p.title}, ${p.location}`}
+                    loading="lazy"
+                    draggable={false}
+                    className="aspect-4/3 w-full shrink-0 object-cover"
+                  />
+                  <div className="flex flex-col p-5">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+                      {p.status}
+                    </span>
+                    <h3 className="mt-1.5 text-base font-bold">{p.title}</h3>
+                    <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>
+                  </div>
+                </Link>
+              ))}
           </AutoScroller>
         </div>
       </section>
@@ -236,9 +247,9 @@ function HomePage() {
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="Video gallery"
-            title="Four films from our sites"
-            intro="Tap any frame to play — starting one clip stops the others."
+            eyebrow="Our work"
+            title="Made for modern spaces"
+            intro="Explore the detail and finish behind every project."
             align="center"
           />
           <VideoGallery />
@@ -249,9 +260,9 @@ function HomePage() {
       <section className="overflow-hidden border-y border-border bg-card/30 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="Latest posts"
-            title="Coming soon & on-site updates"
-            intro="Our published announcements, shown complete — nothing cropped."
+            eyebrow="Why choose Corian®"
+            title="Performance meets possibility"
+            intro="Hygienic, durable and designed around your vision."
           />
         </div>
         <div className="mt-12">
@@ -262,7 +273,7 @@ function HomePage() {
       {/* Process */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <SectionHeading eyebrow="Our process" title="Four clear stages" />
+          <SectionHeading eyebrow="Our promise" title="Beauty that lasts" />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((p, i) => (
               <Reveal key={p.step} delay={i * 90}>
@@ -281,9 +292,9 @@ function HomePage() {
       <section className="overflow-hidden border-y border-border bg-card/30 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="Testimonials"
-            title="What our clients say"
-            intro="Families and developers who trusted us with their plot."
+            eyebrow="Our promise"
+            title="Quality you can feel"
+            intro="Expert craftsmanship and world-class material in every space."
           />
         </div>
         <div className="mt-12">
@@ -291,7 +302,10 @@ function HomePage() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        title="Ready to upgrade your space?"
+        body="Get a seamless, modern surface designed just for you."
+      />
     </>
   );
 }

@@ -1,21 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { img } from "@/lib/site-data";
-import { PageHero } from "@/components/PageBits";
+import { CtaBand, PageHero } from "@/components/PageBits";
+import { Globe, Mail, Phone } from "lucide-react";
+import { site } from "@/lib/site-data";
 // import { Reveal, SectionHeading } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Aspiring Homes — Call 0306 0221896, Lahore" },
+      { title: "Contact Ali Enterprises — Request a Quote" },
       {
         name: "description",
-        content:
-          "Talk to Aspiring Homes about your house design or construction project. Call 0306 0221896, message us on WhatsApp or email aspiringtalks@gmail.com.",
+        content: "Talk to Ali Enterprises about premium Corian® surfaces for your next project.",
       },
-      { property: "og:title", content: "Contact Aspiring Homes" },
+      { property: "og:title", content: "Contact Ali Enterprises" },
       {
         property: "og:description",
-        content: "Call 0306 0221896 or message us on WhatsApp to start your project.",
+        content: "Request a quote for bathrooms, interiors or custom Corian® solutions.",
       },
     ],
   }),
@@ -26,23 +27,35 @@ function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact"
-        title="Coming Soon"
-        intro="Our contact experience and support details are being updated. Please check back soon for the latest information."
+        eyebrow="Contact Ali Enterprises"
+        title="Let's discuss your next project"
+        intro="Request a quote for a seamless, modern surface designed just for you."
         image={img.luxuryVilla}
       />
 
       <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-3xl px-5 text-center lg:px-8">
-          <div className="rounded-3xl border border-dashed border-primary/40 bg-primary/10 p-10 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Under Construction</p>
-            <h2 className="mt-4 text-2xl font-bold sm:text-3xl">We are preparing our contact section</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              You will soon be able to reach us easily through phone, WhatsApp, email and office details.
-            </p>
+        <div className="mx-auto grid max-w-5xl gap-8 px-5 sm:grid-cols-3 lg:px-8">
+          <a href={`tel:${site.phoneTel}`} className="lit-panel bg-card p-6 text-center">
+            <Phone className="mx-auto size-6 text-primary" />
+            <h2 className="mt-4 font-bold">Phone</h2>
+            <p className="mt-2 text-sm text-muted-foreground">{site.phone}</p>
+          </a>
+          <a href={`mailto:${site.email}`} className="lit-panel bg-card p-6 text-center">
+            <Mail className="mx-auto size-6 text-primary" />
+            <h2 className="mt-4 font-bold">Email</h2>
+            <p className="mt-2 break-all text-sm text-muted-foreground">{site.email}</p>
+          </a>
+          <div className="lit-panel bg-card p-6 text-center">
+            <Globe className="mx-auto size-6 text-primary" />
+            <h2 className="mt-4 font-bold">Website</h2>
+            <p className="mt-2 text-sm text-muted-foreground">alienterprisescorian.com</p>
           </div>
         </div>
       </section>
+      <CtaBand
+        title="Tell us about your project"
+        body="Bathrooms, interiors and custom solutions for modern spaces."
+      />
     </>
   );
 }

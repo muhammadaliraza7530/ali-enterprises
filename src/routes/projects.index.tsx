@@ -1,17 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageBits";
+import { ProjectGallery } from "@/components/ProjectGallery";
 import { img } from "@/lib/site-data";
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
     meta: [
-      { title: "Projects — Coming Soon | Aspiring Homes" },
+      { title: "Portfolio — Ali Enterprises Corian® Projects" },
       {
         name: "description",
-        content: "Our project portfolio is being updated. Please check back soon to see our villas and modern homes.",
+        content:
+          "Explore premium Corian® surface projects by Ali Enterprises, from luxury homes to commercial interiors.",
       },
-      { property: "og:title", content: "Projects — Coming Soon | Aspiring Homes" },
-      { property: "og:description", content: "Our portfolio section is being updated. Please check back soon." },
+      { property: "og:title", content: "Portfolio — Ali Enterprises" },
+      { property: "og:description", content: "From luxury homes to commercial interiors." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -24,20 +26,20 @@ function ProjectsPage() {
     <>
       <PageHero
         eyebrow="Portfolio"
-        title="Coming Soon"
-        intro="Our project gallery is being prepared. Please check back soon."
+        title="Our premium projects"
+        intro="From luxury homes to commercial interiors."
         image={img.luxuryHouse}
       />
 
       <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-3xl px-5 text-center lg:px-8">
-          <div className="rounded-3xl border border-dashed border-primary/40 bg-primary/10 p-10 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Under Construction</p>
-            <h2 className="mt-4 text-2xl font-bold sm:text-3xl">New project pages are on the way</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              We are updating this section with our completed, ongoing and upcoming homes.
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Our portfolio showcases the possibilities of seamless Corian® surfaces, from luxury
+              homes to commercial interiors. Select a project to explore every image.
             </p>
           </div>
+          <ProjectGallery />
         </div>
       </section>
     </>

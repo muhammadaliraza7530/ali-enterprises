@@ -8,12 +8,15 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={site.logo} alt="Aspiring Homes logo" className="size-14 rounded-lg object-contain" />
+            <img
+              src={site.logo}
+              alt="Ali Enterprises logo"
+              className="size-14 rounded-lg object-contain"
+            />
             <span className="text-sm font-bold uppercase tracking-[0.22em]">{site.name}</span>
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-            {site.tagline}. Architecture, interior design and turnkey construction across Lahore, Faisalabad and
-            Sialkot.
+            Premium Corian® Surfaces for Modern Spaces
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.16em]">
             {[
@@ -36,11 +39,16 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.28em] text-primary">Explore</h3>
+          <h3 className="text-xs font-bold uppercase tracking-[0.28em] text-primary">
+            Quick links
+          </h3>
           <ul className="mt-5 space-y-3">
             {navLinks.map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="text-sm text-muted-foreground transition-colors hover:text-primary">
+                <Link
+                  to={l.to}
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
                   {l.label}
                 </Link>
               </li>
@@ -65,7 +73,7 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
-              <span>{site.address}</span>
+              <span>alienterprisescorian.com</span>
             </li>
           </ul>
         </div>
